@@ -25,6 +25,7 @@ public class ProductsPage {
 	private WebElement searchBtn;
 	
 	
+
 	public WebElement getSearchBtn() {
 		return searchBtn;
 	}

@@ -13,6 +13,16 @@ public class ProductsPage {
 		PageFactory.initElements(driver, this);
 	}
 
+	
+	@FindBy(xpath = "//input[@class='crmbutton small create']")
+	private WebElement searchBtn;
+	
+	
+	public WebElement getSearchBtn() {
+		return searchBtn;
+	}
+
+
 	@FindBy(xpath = "//img[@alt='Create Product...']")
 	private WebElement createProduct;
 

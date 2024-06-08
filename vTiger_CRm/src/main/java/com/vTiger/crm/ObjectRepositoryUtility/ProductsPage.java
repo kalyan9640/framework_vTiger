@@ -12,6 +12,13 @@ public class ProductsPage {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(xpath = "//input[@class='txtBox']")
+	private WebElement searchBarEdit;
+
+	public WebElement getSearchBarEdit() {
+		return searchBarEdit;
+	}
 
 	@FindBy(xpath = "//img[@alt='Create Product...']")
 	private WebElement createProduct;

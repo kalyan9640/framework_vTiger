@@ -40,6 +40,13 @@ public class HomePage {
 	@FindBy(linkText = "More")
 	private WebElement moreLink;
 	
+	
+	@FindBy(xpath = "//a[text()='Products']")
+	private WebElement productsLink;
+	
+	public WebElement getProductsLink() {
+		return productsLink;
+	}
 	public void navigateToCampaignPage() {
 		Actions act=new Actions(driver);
 		act.moveToElement(moreLink).perform();

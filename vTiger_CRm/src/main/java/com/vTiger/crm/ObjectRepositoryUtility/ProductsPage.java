@@ -13,6 +13,10 @@ public class ProductsPage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	/**
+	 * @author Kalyan
+	 */
+	
 	@FindBy(xpath = "//input[@class='txtBox']")
 	private WebElement searchBarEdit;
 

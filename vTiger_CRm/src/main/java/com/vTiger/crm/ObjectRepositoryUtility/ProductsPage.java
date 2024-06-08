@@ -5,6 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ * User 1
+ */
+
+
 public class ProductsPage {
 	WebDriver driver = null;
 

@@ -20,6 +20,8 @@ import com.vTiger.crm.generic.javaUtility.JavaUtility;
 import com.vTiger.crm.generic.webDriverUtility.UtilityClassObject;
 import com.vTiger.crm.generic.webDriverUtility.WebDriverUtility;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 
 @Listeners(com.vTiger.crm.ListenerUtility.ListenerImple.class) 
 
@@ -50,10 +52,13 @@ public class BaseClassTest {
 		String browser = fLib.getDataFromPropertiesFile("browser");
 
 		if (browser.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
+			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		} else if (browser.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		}
 		sdriver=driver;
